@@ -1,0 +1,39 @@
+biscuits = 40
+chocolates = 30
+ice_cream = 25
+tooth_paste = 10
+soap = 50
+
+Customer_Name = input('Enter Customer name :')
+Phone_Number = int(input('Enter CUSTOMER phone number :'))
+
+biscuit_packets = int(input('Enter number of biscuit packets :'))
+chockys = int(input('Enter number of chocolates :'))
+ice_creams = int(input('Enter number of ice creams :'))
+tooth_p = int(input('Enter number of toothpaste :'))
+soaps = int(input('Enter number of soaps :'))
+bill = (biscuit*biscuit_packets)+(chocolates*chockys)+(ice_cream*ice_creams)+(tooth_paste*tooth_p)+(soap*soaps)
+
+if bill>5000 :
+    discount = bill*10/100
+    tax = bill*10/100
+  
+elif bill>3000 :
+    discount=bill*8/100
+    tax=bill*10/100
+elif bill>2000 :
+    discount=bill*5/100
+    tax=bill*18/100
+elif bill>1000 :
+    discount=bill*3/100
+    tax=bill*18/100
+
+total = bill - discount + tax
+print("\n\n\nName     : ", Customer_Name)
+print("Mobile   : ", Phone_Number)
+print('\nTotal    :   ', bill)
+print('Discount : ', "-", discount)
+print('Tax      : ', "+", tax)
+print("--------------------")
+print('Amount   :   ', total)
+print("--------------------\n\n")
